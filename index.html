@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shree Krishna Telecom</title>
+</head>
+<body style="font-family:Arial;max-width:800px;margin:auto;padding:20px">
+<h1>Shree Krishna Telecom</h1>
+<p>Dealer Portal Demo</p>
+
+<div style="border:1px solid #ccc;padding:15px;border-radius:10px">
+<h3>OnePlus Bullets Wireless Z2 ANC</h3>
+<p>Green Colour</p>
+<button onclick="document.getElementById('login').style.display='block'">Select Product</button>
+</div>
+
+<div id="login" style="display:none;margin-top:20px">
+<h3>Dealer Login</h3>
+<input id="u" placeholder="Username"><br><br>
+<input id="p" type="password" placeholder="Password"><br><br>
+<button onclick="login()">Login</button>
+<p>Demo Login: dealer / 1234</p>
+</div>
+
+<div id="details" style="display:none">
+<h3>Product Details</h3>
+<p>Price: ₹1760</p>
+<p>Stock Left: 40 pcs</p>
+<input type="number" value="1" min="1">
+<button>Add to Cart</button>
+</div>
+
+<script>
+function login(){
+ if(document.getElementById('u').value==='dealer' && document.getElementById('p').value==='1234'){
+   document.getElementById('details').style.display='block';
+   document.getElementById('login').style.display='none';
+ } else {
+   alert('Wrong Login');
+ }
+}
+</script>
+</body>
+</html>
